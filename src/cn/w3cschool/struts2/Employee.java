@@ -1,35 +1,30 @@
 package cn.w3cschool.struts2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.opensymphony.xwork2.ActionSupport;
 
 public class Employee extends ActionSupport {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+
 	private String name;
-	private int age;
+	private String department;
+	private List employees;
+	private List contractors;
+	public Employee() {}
+	public Employee(String name,String department) {
+		this.name = name;
+		this.department = department;
+	}
 	public String execute() {
+		employees = new ArrayList<String>();
+		employees.add(new Employee("George","Recruitment"));
+		employees.add(new Employee("Danielle","Accounts"));
+		employees.add(new Employee("Melissa","Recruitment"));
+	    employees.add(new Employee("Rose","Accounts"));
+	    
 		return SUCCESS;
 	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public int getAge() {
-		return age;
-	}
-	public void setAge(int age) {
-		this.age = age;
-	}
-//	public void validate() {
-//		if(name == null || name.trim().equals("")) {
-//			addFieldError("name", "The name is required");
-//		}
-//		if(age < 28 || age > 65) {
-//			addFieldError("age", "Age must be in between 28 and 65");
-//		}
-//	}
+
+
 }

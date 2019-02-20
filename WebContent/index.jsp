@@ -5,13 +5,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Hello World</title>
 </head>
 <body>
-	<s:form action="empinfo" method="post">
-		<s:textfield name="name" label="Name" size="20"/>
-		<s:textfield name="age" label="Age" size="20"/>
-		<s:submit name="submit" label="Submit" align="center"/>
-	</s:form>
+   <h1>Hello World From Struts2</h1>
+   <form action="hello">
+      <label for="name">Please pick a name</label><br/>
+      <select name="name">
+         <option name="Mike">Mike</option>
+         <option name="Jason">Jason</option>
+         <option name="Mark">Mark</option>
+      </select>
+      <input type="submit" value="Say Hello"/>
+   </form>
 </body>
 </html>
